@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Adventure Mad Libs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Space Adventure Mad Libs</h1>
+        <form action="/generate" method="POST">
+            <label for="adjective1">Adjective:</label>
+            <input type="text" id="adjective1" name="adjective1" required>
+
+            <label for="noun1">Noun:</label>
+            <input type="text" id="noun1" name="noun1" required>
+
+            <label for="verb1">Verb:</label>
+            <input type="text" id="verb1" name="verb1" required>
+
+            <label for="adverb">Adverb:</label>
+            <input type="text" id="adverb" name="adverb" required>
+
+            <label for="adjective2">Adjective:</label>
+            <input type="text" id="adjective2" name="adjective2" required>
+
+            <button type="submit">Generate Story</button>
+        </form>
+    </div>
+<div class="addendum">
+    <h4>Addendum:</h4>
+    <p>In this Space Adventure Mad Libs project, I leveraged Express.js for its simplicity and robust features, creating a
+    server that handles both static file serving and form submissions. I organized static files in a 'public' folder for
+    clear separation from server-side code and implemented two main routes: a GET route for the initial form and a POST
+    route for story generation. The server processes form data, checks for completeness, and generates a customized story
+    based on user inputs, with error handling to ensure all fields are filled. The CSS employs a mobile-first, space-themed
+    design for a responsive user experience across devices. By generating content server-side and sending complete HTML
+    pages, I eliminated the need for client-side JavaScript. This project enhanced my understanding of server-side
+    rendering, Express form handling, and interactive web application creation, while also improving my styling skills.
+    Future improvements could include additional story templates, user accounts for saving favorite stories, and dynamic
+    interface animations.</p>
+</div>
+    <footer>
+        <p>Last updated:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+        var x = document.lastModified;
+        document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+
+</html>
